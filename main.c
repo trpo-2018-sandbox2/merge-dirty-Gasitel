@@ -20,7 +20,7 @@ void print_array(int *arr, int size)
 {
     printf("Array: ");
     int i;
-    for (i = 0; i < N_ELEMENTS(arr); ++i) {
+    for (i = 0; i < sizeof(arr)-1;++i) {
         printf("%d ", arr[i]);
     }
     printf("\n");
@@ -33,7 +33,7 @@ int main()
     const int min = min_element(arr, N_ELEMENTS(arr));
 
     print_array(arr, N_ELEMENTS(arr));
-    printf("Min element: %d\n", min);
+    printf("Minimum element: %d\n", min);
 
     return 0;
 }
